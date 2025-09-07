@@ -16,9 +16,9 @@
       <nav class="site-nav" aria-label="主导航">
         <a href="index.html">首页</a>
         <a href="code.html">代码中心</a>
-        <a href="#" class="gated-link">教程中心</a>
-        <a href="#" class="gated-link">软件中心</a>
-        <a href="#" class="gated-link">会员专区</a>
+        <a href="#" class="gated-link" data-href="tutorials.html">教程中心</a>
+        <a href="#" class="gated-link" data-href="software.html">软件中心</a>
+        <a href="#" class="gated-link" data-href="vip.html">会员专区</a>
         <a href="payment.html">付款说明</a>
         <a href="about.html">关于老王</a>
       </nav>
@@ -43,6 +43,20 @@
       <h3>访问受限</h3>
       <p>该内容需要授权/会员权限。请联系作者授权。</p>
       <ul class="meta-list"><li>微信：imagej_sci</li></ul>
+      <form class="auth-form" onsubmit="return false;">
+        <div class="form-row">
+          <label>机器码（示例：12345-67890）</label>
+          <input id="auth-mc" name="machine" type="text" placeholder="请输入机器码" />
+        </div>
+        <div class="form-row">
+          <label>授权码</label>
+          <input id="auth-lic" name="license" type="text" placeholder="请输入授权码" />
+        </div>
+        <div class="form-row">
+          <button id="auth-verify" class="btn primary" type="button">校验并授权</button>
+        </div>
+        
+      </form>
       <div class="modal-actions">
         <a class="btn primary" href="#" data-action="close">我已联系</a>
       </div>
